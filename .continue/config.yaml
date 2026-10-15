@@ -1,0 +1,24 @@
+name: Local Offline Assistant
+version: 1.0.0
+schema: v1
+models:
+  - name: Gemma 3 4B
+    provider: ollama
+    model: gemma3:4b
+    roles:
+      - chat
+      - edit
+
+  - name: Qwen2.5 Coder 3B
+    provider: ollama
+    model: qwen2.5-coder:3b
+    roles:
+      - chat
+      - edit
+      - apply
+
+  - name: Qwen Coder Autocomplete
+    provider: ollama
+    model: qwen2.5-coder:1.5b
+    roles:
+      - autocomplete
