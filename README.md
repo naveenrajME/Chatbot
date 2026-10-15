@@ -28,8 +28,8 @@ cd frontend && npm install && npm run build && cd ..
 3. Clone this repo and double-click `run.bat`. The built frontend is included, so Node.js is
    only needed if you change the React code.
 
-Chats, memories, reminders and checklists live in `data/chat.db`, which is not in the repo;
-a new computer starts empty. To bring your data along, copy `data/chat.db` across manually.
+Chats, memories, reminders and checklists live in `data/chat.db`, which is committed to this
+repo, so a fresh clone starts with the same data. Commit and push it again to carry over new chats.
 
 ### Working on the frontend
 
