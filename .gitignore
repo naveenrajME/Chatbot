@@ -1,5 +1,6 @@
 .venv/
-data/
+data/*.db-wal
+data/*.db-shm
 __pycache__/
 frontend/node_modules/
 local-chat.backup.html
