@@ -15,6 +15,22 @@ cd frontend && npm install && npm run build && cd ..
 .venv\Scripts\python.exe -m uvicorn app.main:app --port 8765
 ```
 
+### Setting up on another computer
+
+1. Install [Python 3.10+](https://www.python.org/downloads/) (tick "Add to PATH") and [Ollama](https://ollama.com/download).
+2. Pull the models and create the QA model:
+   ```
+   ollama pull gemma3:4b
+   ollama pull qwen2.5-coder:3b
+   ollama pull qwen2.5-coder:1.5b
+   ollama create qa-assistant -f ollama/Modelfile
+   ```
+3. Clone this repo and double-click `run.bat`. The built frontend is included, so Node.js is
+   only needed if you change the React code.
+
+Chats, memories, reminders and checklists live in `data/chat.db`, which is not in the repo;
+a new computer starts empty. To bring your data along, copy `data/chat.db` across manually.
+
 ### Working on the frontend
 
 Run the backend as above, then in another terminal:
